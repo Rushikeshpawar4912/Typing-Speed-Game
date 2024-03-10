@@ -1,0 +1,114 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color:#3333336a;
+}
+
+.Container{
+  width: 800px;
+  padding: 55px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+.typingpara{
+  overflow: hidden;
+  min-height: 350px;
+}
+
+.Container .content-box{
+  padding: 5px 15px;
+  background-color:#333;
+  color:whitesmoke;
+  margin: 5px;
+}
+.Container .input-field{
+  opacity: 0;
+  z-index: -999;
+  position: absolute;
+}
+.typingpara p{
+  font-size: 21px;
+  letter-spacing: 2px;
+  word-break: break-all;
+}
+.typingpara p span{
+  position: relative;
+}
+
+.typingpara p span.active{
+  color: rgb(119, 184, 119);
+}
+.typingpara p span.correct{
+  color: rgb(100, 193, 100);
+}
+.typingpara p span.incorrect{
+  color: #cb3439;
+  outline: 1px solid #fff;
+  background: #ffc0cb;
+}
+.content-box .content{
+  margin-top: 17px;
+  display: flex;
+  padding: 12px 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #bfbfbf;
+}
+.content button{
+  outline: none;
+  border: none;
+  width: 105px;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: orangered;
+  transition: transform 0.4s ease;
+}
+.content button:active{
+  transform: scale(0.97);
+}
+.content .result{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: calc(100% - 150px);
+  justify-content: space-between;
+}
+.result li{
+  display: flex;
+  height: 20px;
+  list-style: none;
+  position: relative;
+  align-items: center;
+}
+.result li:not(:first-child){
+  padding-left: 22px;
+  border-left: 1px solid #bfbfbf;
+}
+.result li p{
+  font-size: 19px;
+}
+.result li span{
+  display: block;
+  font-size: 20px;
+  margin-left: 10px;
+}
+li span b{
+  font-weight: 500;
+}
+li:not(:first-child) span{
+  font-weight: 500;
+}
+
+
